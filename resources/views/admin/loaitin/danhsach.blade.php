@@ -23,7 +23,6 @@
                                 <th class="text-center">ID</th>
                                 <th class="text-center">Tên Loại Tin</th>
                                 <th class="text-center">Tên Không Dấu</th>
-                                <th class="text-center">Tên Thể Loại</th>
                                 <th class="text-center">Sửa</th>
                                 <th class="text-center">Xóa</th>
                             </tr>
@@ -34,14 +33,13 @@
                                     <td>{{ $chitiet->id }}</td>
                                     <td>{{ $chitiet->Ten }}</td>
                                     <td>{{ $chitiet->TenKhongDau }}</td>
-                                    <td>{{ $chitiet->TheLoai->Ten }}</td>
                                     <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="admin/loaitin/sua/{{ $chitiet->id }}">Sửa</a></td>
                                     <td class="center">
                                         <i class="fa fa-trash-o fa-fw"></i>
                                         <input type="hidden" class="hiddenID" value="{{ $chitiet->id }}">
 
                                         <a href="#" class="btnDel" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModal{{$chitiet->id}}">Xóa</a>
-                                        
+
                                         <div style="text-align: left;" id="myModal{{$chitiet->id}}" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
 

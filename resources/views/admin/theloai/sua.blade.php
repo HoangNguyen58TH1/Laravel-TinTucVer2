@@ -37,7 +37,7 @@
                                     <input class="form-control input-width" name="cate_changed" placeholder="Nhập tên mới cho Thể Loại" />
                                 </p>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-default">Thực hiện</button>
 
                             <button type="reset" class="btn btn-default btn-mleft">Nhập Lại</button>

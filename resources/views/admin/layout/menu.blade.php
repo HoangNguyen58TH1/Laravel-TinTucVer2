@@ -15,7 +15,7 @@
                         <li>
                             <a href="admin"><i class="fa fa-dashboard fa-fw icon-mright"></i>Bảng Điều Khiển</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="admin/theloai/danhsach"><i class="fa fa-list fa-fw icon-mright"></i>Thể Loại<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -25,8 +25,7 @@
                                     <a href="admin/theloai/them">Thêm Thể Loại</a>
                                 </li>
                             </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+                        </li> -->
 
                         <li>
                             <a href="admin/loaitin/danhsach"><i class="fa fa-tasks fa-fw icon-mright"></i>Loại Tin<span class="fa arrow"></span></a>
@@ -83,4 +82,3 @@
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
-            

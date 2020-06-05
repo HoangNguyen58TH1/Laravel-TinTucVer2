@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Validator;
-use App\TheLoai;
+// use App\TheLoai;
 use App\LoaiTin;
 use App\TinTuc;
 use App\User;
@@ -13,10 +13,11 @@ use App\Slide;
 
 class HomeConTroller extends Controller
 {
-    //
+
 	public function __construct(){ // Trang chủ và trang liên hệ đều cần dữ liệu của thanh menu và slide để hiển thị ra, nên ta dùng view share để cả 2 trang đều có biến này để sử dụng.
 		$data = [
-			'theloai' => TheLoai::all(),
+			// 'theloai' => TheLoai::all(),
+			'loaitin' => LoaiTin::all(),
 			'slide' => Slide::all()
 		];
 		view()->share('data',$data);
@@ -71,7 +72,7 @@ class HomeConTroller extends Controller
 	    		return redirect('dang-nhap')->with('message','Đăng nhập không thành công!');
     	}
     }
-    	
+
 
     public function Logout(){
     	Auth::logout();

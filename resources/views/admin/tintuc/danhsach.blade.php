@@ -23,7 +23,6 @@
                                 <th class="text-center">ID</th>
                                 <th class="text-center">Tiêu Đề Tin Tức</th>
                                 <th class="text-center">Tóm Tắt</th>
-                                <th class="text-center">Thể Loại</th>
                                 <th class="text-center">Loại Tin</th>
                                 <th class="text-center">Lượt Xem</th>
                                 <th class="text-center">Nổi Bật</th>
@@ -40,7 +39,6 @@
                                     <img width="100px" src="upload/tintuc/{{ $chitiet->Hinh }}">
                                 </td>
                                 <td>{{ $chitiet->TomTat }}</td>
-                                <td>{{ $chitiet->LoaiTin->TheLoai->Ten }}</td>
                                 <td>{{ $chitiet->LoaiTin->Ten }}</td>
                                 <td>{{ $chitiet->SoLuotXem }}</td>
                                 <td>
@@ -55,9 +53,9 @@
                                     <i class="fa fa-trash-o  fa-fw"></i>
 
                                     <input type="hidden" class="hiddenID" value="{{ $chitiet->id }}">
-                                    
+
                                     <a href="#" class="btnDel" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModal{{$chitiet->id}}">Xóa</a>
-                                        
+
                                         <div style="text-align: left;" id="myModal{{$chitiet->id}}" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
 

@@ -14,8 +14,8 @@ class TaoLoaiTin extends Migration
     {
         Schema::create('LoaiTin', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idTheLoai')->unsigned();
-            $table->foreign('idTheLoai')->references('id')->on('TheLoai');
+            // $table->integer('idTheLoai')->unsigned();
+            // $table->foreign('idTheLoai')->references('id')->on('TheLoai');
             $table->string('Ten');
             $table->string('TenKhongDau');
             $table->timestamps();

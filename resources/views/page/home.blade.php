@@ -17,24 +17,21 @@
             @include('block.menu')
 
             <div class="col-md-9">
-                <div class="panel panel-default">            
+                <div class="panel panel-default">
                     <div class="panel-heading" style="background-color:#337AB7; color:white;" >
                         <h2 style="margin-top:0px; margin-bottom:0px;">Laravel Tin Tức</h2>
                     </div>
 
                     <div class="panel-body">
-                        @foreach($data['theloai'] as $theloai)
-                            @if(count($theloai->LoaiTin) > 0)
+                        @foreach($data['loaitin'] as $loaitin)
                             <!-- item -->
                             <div class="row-item row">
                                 <h3>
-                                    <a class="cate-list">{{ $theloai->Ten }}</a> |  
-                                    @foreach($theloai->LoaiTin as $loaitin)
-                                        <small><a href="loai-tin/{{ $loaitin->TenKhongDau }}"><i>{{ $loaitin->Ten }}</i></a>/</small>
-                                    @endforeach
+                                    <a class="cate-list">{{ $loaitin->Ten }}</a> |
+
                                 </h3>
                                 <?php
-                                    $data = $theloai->TinTuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
+                                    $data = $loaitin->TinTuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
                                     $chosen_article = $data->shift();
                                 ?>
                                 <div class="col-md-8 border-right">
@@ -51,7 +48,7 @@
                                     </div>
 
                                 </div>
-                                
+
 
                                 <div class="col-md-4">
                                     @foreach($data->all() as $remaining_article)
@@ -63,11 +60,10 @@
                                         </a>
                                     @endforeach
                                 </div>
-                                
+
                                 <div class="break"></div>
                             </div>
                             <!-- end item -->
-                            @endif
                         @endforeach
                     </div>
                 </div>

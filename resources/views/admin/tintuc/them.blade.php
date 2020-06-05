@@ -19,7 +19,7 @@
                                 @endforeach
                             </div>
                         @endif
-                        
+
                         @if(session('error'))
                             <div class="alert alert-danger">
                                 <strong>{{session('error')}}</strong>
@@ -33,14 +33,6 @@
                         @endif
                         <form action="admin/tintuc/them" method="POST" enctype="multipart/form-data"> <!-- Form bắt buộc phải có thuộc tính enctype thì mới up được file lên -->
                             {{ csrf_field() }}
-                            <div class="form-group">
-                                <p><label>Chọn Thể Loại</label></p>
-                                <select class="form-control input-width catefield" name="cate">
-                                    @foreach($theloai as $chitietTL)
-                                        <option value="{{ $chitietTL->id }}">{{ $chitietTL->Ten }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
 
                             <div class="form-group">
                                 <p><label>Chọn Loại Tin</label></p>

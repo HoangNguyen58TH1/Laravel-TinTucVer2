@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Thể Loại
+                        <h1 class="page-header">Loại Tin
                             <small>> {{$loaitin->Ten}}</small>
                         </h1>
                     </div>
@@ -26,18 +26,6 @@
                                     <strong>{{ session('message') }}</strong>
                                 </div>
                             @endif
-                            <div class="form-group">
-                                <p><label>Chọn Thể Loại</label></p>
-                                <select class="form-control input-width" name="cate">
-                                    @foreach($theloai as $chitiet)
-                                        <option 
-                                        @if($loaitin->idTheLoai == $chitiet->id)
-                                            {{ 'selected' }}
-                                        @endif
-                                        value="{{ $chitiet->id }}">{{ $chitiet->Ten }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
 
                             <div class="form-group">
                                 <p>
@@ -50,7 +38,7 @@
                                     <input class="form-control input-width" name="scate_changed" placeholder="Nhập tên mới cho Loại Tin" value="{{ $loaitin->Ten }}" />
                                 </p>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-default">Thực hiện</button>
 
                             <button type="reset" class="btn btn-default btn-mleft">Nhập Lại</button>

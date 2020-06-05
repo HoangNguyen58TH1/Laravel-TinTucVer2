@@ -19,7 +19,7 @@
                                 @endforeach
                             </div>
                         @endif
-                        
+
                         @if(session('error'))
                             <div class="alert alert-danger">
                                 <strong>{{session('error')}}</strong>
@@ -33,18 +33,6 @@
                         @endif
                         <form action="admin/tintuc/sua/{{ $tintuc->id }}" method="POST" enctype="multipart/form-data"> <!-- Form bắt buộc phải có thuộc tính enctype thì mới up được file lên -->
                             {{ csrf_field() }}
-                            <div class="form-group">
-                                <p><label>Chọn Thể Loại</label></p>
-                                <select class="form-control input-width catefield" name="cate">
-                                    @foreach($theloai as $chitietTL)
-                                        <option
-                                        @if($tintuc->LoaiTin->TheLoai->id == $chitietTL->id)
-                                            {{ 'selected' }}
-                                        @endif
-                                         value="{{ $chitietTL->id }}">{{ $chitietTL->Ten }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
 
                             <div class="form-group">
                                 <p><label>Chọn Loại Tin</label></p>
@@ -136,7 +124,7 @@
                                     <input type="hidden" value="{{$binhluan->id}}">
 
                                     <a href="#" class="btnDel" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModal{{$binhluan->id}}">Xóa</a>
-                                        
+
                                         <div style="text-align: left;" id="myModal{{$binhluan->id}}" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
 

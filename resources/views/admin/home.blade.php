@@ -18,7 +18,7 @@
 	                    </div>
 	                </div>
 				</div>
-				
+
 				<div class="clearfix"></div>
 				<div class="col-lg-12">
 					<div class="panel panel-default calen">
@@ -50,7 +50,7 @@
 		                    </table>
 	                    </div>
 	                </div>
-					
+
 				</div>
 
 				<div class="col-lg-12">
@@ -66,7 +66,6 @@
 		                                <th class="text-center">Tiêu Đề</th>
 		                                <th class="text-center">Tóm Tắt</th>
 		                                <th class="text-center">Thuộc Loại Tin</th>
-		                                <th class="text-center">Thuộc Thể Loại</th>
 		                                <th class="text-center">Ngày Đăng</th>
 		                                <th class="text-center">Số Lượt Xem</th>
 		                            </tr>
@@ -78,7 +77,6 @@
 		                                    <td>{{ $article->TieuDe }}</td>
 		                                    <td>{{ $article->TomTat }}</td>
 		                                    <td>{{ $article->LoaiTin->Ten }}</td>
-		                                    <td>{{ $article->LoaiTin->TheLoai->Ten }}</td>
 		                                    <td>
 		                                    	@if(empty($article->created_at))
 		                                    		{{ 'Không xác định' }}
@@ -93,7 +91,7 @@
 		                    </table>
 	                    </div>
 	                </div>
-					
+
 				</div>
             </div>
         </div>

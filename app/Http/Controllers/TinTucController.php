@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\TheLoai;
+// use App\TheLoai;
 use App\LoaiTin;
 use App\TinTuc;
 use App\Comment;
@@ -17,9 +17,10 @@ class TinTucController extends Controller
     }
 
     public function Them(){
-    	$theloai = TheLoai::all();
+    	// $theloai = TheLoai::all();
     	$loaitin = LoaiTin::all();
-    	return view('admin.tintuc.them',['theloai'=>$theloai, 'loaitin'=>$loaitin]);
+    	// return view('admin.tintuc.them',['theloai'=>$theloai, 'loaitin'=>$loaitin]);
+    	return view('admin.tintuc.them',['loaitin'=>$loaitin]);
     }
 
     public function XuLyThemTT(Request $request){
@@ -80,9 +81,10 @@ class TinTucController extends Controller
 
     public function Sua($id){
     	$tintuc = TinTuc::find($id);
-    	$theloai = TheLoai::all();
+    	// $theloai = TheLoai::all();
     	$loaitin = LoaiTin::all();
-    	return view('admin.tintuc.sua',['tintuc'=>$tintuc, 'theloai'=>$theloai, 'loaitin'=>$loaitin]);
+    	// return view('admin.tintuc.sua',['tintuc'=>$tintuc, 'theloai'=>$theloai, 'loaitin'=>$loaitin]);
+    	return view('admin.tintuc.sua',['tintuc'=>$tintuc, 'loaitin'=>$loaitin]);
     }
 
     public function XuLySuaTT(Request $request,$id){

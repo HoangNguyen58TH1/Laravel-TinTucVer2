@@ -31,9 +31,9 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <p><label>Tên Thể Loại</label></p>
-                                <input class="form-control input-width" name="cate_name" placeholder="Nhập tên Thể Loại.." />
+                                <input class="form-control input-width" name="cate_name" placeholder="Nhập Tên Thể Loại.." />
                             </div>
-                            
+
                             <button type="submit" class="btn btn-default">Thêm</button>
 
                             <button type="reset" class="btn btn-default btn-mleft">Nhập Lại</button>
