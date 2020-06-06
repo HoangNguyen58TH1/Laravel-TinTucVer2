@@ -14,11 +14,9 @@ class LoaiTin extends Model
     	return $this->hasMany('App\TinTuc','idLoaiTin','id');
     }
 
-    // public function Delete(){
-    //     $this->TinTuc()->delete(); // Vì có ràng buộc khóa ngoại nên phải xóa dữ liệu có khóa ngoại trước
+    public function Delete(){
+        $this->TinTuc()->delete(); // Vì có ràng buộc khóa ngoại nên phải xóa dữ liệu có khóa ngoại trước
 
-    //     $this->LoaiTin()->delete();
-
-    //     return parent::delete();
-    // }
+        return parent::delete();
+    }
 }

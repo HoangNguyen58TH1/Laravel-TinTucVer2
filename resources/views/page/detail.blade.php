@@ -9,8 +9,10 @@
 <div class="container">
 	<div class="row">
 
+		@include('block.menu')
+
 		<!-- Blog Post Content Column -->
-		<div class="col-lg-9">
+		<div class="col-lg-7">
 
 			<!-- Blog Post -->
 
@@ -59,7 +61,7 @@
 						</div>
 						@endforeach
 					@endif
-					
+
 					@if(session('message'))
 					<div class="alert alert-success">
 						<strong>{{ session('message') }}</strong>
@@ -87,7 +89,7 @@
 					</a>
 					<div class="media-body">
 						<h4 class="media-heading">
-							{{ $binhluan->User->name }} | 
+							{{ $binhluan->User->name }} |
 							<small>{{ dateTimeFormat($binhluan->created_at) }}</small>
 						</h4>
 						{{ $binhluan->NoiDung }}
@@ -145,7 +147,7 @@
 						</div>
 						<!-- end item -->
 					@endforeach
-					
+
 				</div>
 			</div>
 

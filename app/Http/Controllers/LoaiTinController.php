@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\TheLoai;
 use App\LoaiTin;
 
 class LoaiTinController extends Controller
@@ -34,15 +33,15 @@ class LoaiTinController extends Controller
 			// 	'sub_cate.max' => 'Tên Loại Tin gồm tối đa 100 ký tự!'
 			// ]);
 			[
-				'sub_name'=>'required|unique:LoaiTin,Ten|min:3|max:100'
+				'sub_cate'=>'required|unique:LoaiTin,Ten|min:3|max:100'
 				// Unique: Dữ liệu nhập vào không được trùng với dữ liệu hiện tại
 				// Cú pháp của unique:tên_bảng,tên_cột
 			],
 			[
-				'sub_name.required'=>'Bạn chưa nhập tên Loại Tin!',
-				'sub_name.unique' => 'Tên Loại Tin đã tồn tại, vui lòng nhập lại!',
-				'sub_name.min'=>'Tên Loại Tin gồm ít nhất 3 ký tự!',
-				'sub_name.max'=>'Tên Loại Tin gồm tối đa 100 ký tự!'
+				'sub_cate.required'=>'Bạn chưa nhập tên Loại Tin!',
+				'sub_cate.unique' => 'Tên Loại Tin đã tồn tại, vui lòng nhập lại!',
+				'sub_cate.min'=>'Tên Loại Tin gồm ít nhất 3 ký tự!',
+				'sub_cate.max'=>'Tên Loại Tin gồm tối đa 100 ký tự!'
 			]);
 		$loaitin = new LoaiTin;
 		// $loaitin->idTheLoai = $request->cate;

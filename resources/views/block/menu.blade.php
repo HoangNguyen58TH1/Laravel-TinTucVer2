@@ -1,4 +1,4 @@
-<div class="col-md-3 ">
+<div class="col-md-2 ">
 
     <ul class="list-group" id="menu">
         <li href="#" class="list-group-item menu1 active">

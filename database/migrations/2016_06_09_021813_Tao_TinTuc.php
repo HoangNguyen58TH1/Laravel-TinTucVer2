@@ -14,6 +14,8 @@ class TaoTinTuc extends Migration
     {
         Schema::create('TinTuc', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('idLoaiTin')->unsigned();
+            $table->foreign('idLoaiTin')->references('id')->on('LoaiTin');
             $table->string('TieuDe',255);
             $table->string('TieuDeKhongDau',255);
             $table->text('TomTat');
@@ -21,8 +23,6 @@ class TaoTinTuc extends Migration
             $table->string('Hinh');
             $table->integer('NoiBat')->default(0);
             $table->integer('SoLuotXem')->default(0);
-            $table->integer('idLoaiTin')->unsigned();
-            $table->foreign('idLoaiTin')->references('id')->on('LoaiTin');
             $table->timestamps();
         });
     }

@@ -49,22 +49,22 @@ Route::group(['prefix' => 'admin','middleware' => 'adminAuth'],function(){
 	Route::get('/','AdminController@index');
 
 	// Route group The Loai
-	Route::group(['prefix' => 'theloai'],function(){
-		// Route URL: admin/theloai/danhsach
-		Route::get('danhsach','TheLoaiController@getDanhSach');
+	// Route::group(['prefix' => 'theloai'],function(){
+	// 	// Route URL: admin/theloai/danhsach
+	// 	Route::get('danhsach','TheLoaiController@getDanhSach');
 
-		// Route URL: admin/theloai/them
-		Route::get('them','TheLoaiController@Them');
+	// 	// Route URL: admin/theloai/them
+	// 	Route::get('them','TheLoaiController@Them');
 
-		Route::post('them','TheLoaiController@XuLyThemTL');
+	// 	Route::post('them','TheLoaiController@XuLyThemTL');
 
-		// Route URL: admin/theloai/sua
-		Route::get('sua/{id}','TheLoaiController@Sua');
+	// 	// Route URL: admin/theloai/sua
+	// 	Route::get('sua/{id}','TheLoaiController@Sua');
 
-		Route::post('sua/{id}','TheLoaiController@XuLySuaTL');
+	// 	Route::post('sua/{id}','TheLoaiController@XuLySuaTL');
 
-		Route::get('xoa/{id}','TheLoaiController@Xoa');
-	});
+	// 	Route::get('xoa/{id}','TheLoaiController@Xoa');
+	// });
 
 	// Route group Loai Tin
 	Route::group(['prefix' => 'loaitin'],function(){

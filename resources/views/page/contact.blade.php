@@ -16,7 +16,7 @@
         <div class="row main-left">
             @include('block.menu')
 
-            <div class="col-md-9">
+            <div class="col-md-10">
 	            <div class="panel panel-default">
 	            	<div class="panel-heading" style="background-color:#337AB7; color:white;" >
 	            		<h2 style="margin-top:0px; margin-bottom:0px;">Liên hệ</h2>
