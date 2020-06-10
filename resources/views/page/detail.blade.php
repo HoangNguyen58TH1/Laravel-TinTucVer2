@@ -25,7 +25,7 @@
 			</p>
 
 			<!-- Preview Image -->
-			<img class="img-responsive" src="upload/tintuc/{{ $tintuc->Hinh }}" alt="Hình ảnh của bài viết">
+			<img class="img-responsive" src="{{ $tintuc->Hinh }}" alt="Hình ảnh của bài viết">
 
 			<!-- Date/Time -->
 			<p><span class="glyphicon glyphicon-time"></span>
@@ -110,7 +110,7 @@
 						<div class="row" style="margin-top: 10px;">
 							<div class="col-md-5">
 								<a href="tin-tuc/{{ $tlq->TieuDeKhongDau }}.html">
-									<img class="img-responsive" src="upload/tintuc/{{ $tlq->Hinh }}" alt="Hình ảnh của bài viết">
+									<img class="img-responsive" src="{{ $tlq->Hinh }}" alt="Hình ảnh của bài viết">
 								</a>
 							</div>
 							<div class="col-md-7">
@@ -134,7 +134,7 @@
 						<div class="row" style="margin-top: 10px;">
 							<div class="col-md-5">
 								<a href="tin-tuc/{{ $tnb->TieuDeKhongDau }}.html">
-									<img class="img-responsive" src="upload/tintuc/{{ $tnb->Hinh }}" alt="Hình ảnh của bài viết">
+									<img class="img-responsive" src="{{ $tnb->Hinh }}" alt="Hình ảnh của bài viết">
 								</a>
 							</div>
 							<div class="col-md-7">

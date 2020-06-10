@@ -36,7 +36,7 @@
                                 <td>{{ $chitiet->id }}</td>
                                 <td>
                                     <p>{{ $chitiet->TieuDe }}</p>
-                                    <img width="100px" src="upload/tintuc/{{ $chitiet->Hinh }}">
+                                    <img width="100px" src="{{ $chitiet->Hinh }}">
                                 </td>
                                 <td>{{ $chitiet->TomTat }}</td>
                                 <td>{{ $chitiet->LoaiTin->Ten }}</td>

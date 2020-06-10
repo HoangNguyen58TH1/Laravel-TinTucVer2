@@ -37,7 +37,7 @@
                                 <div class="col-md-8 border-right">
                                     <div class="col-md-5">
                                         <a href="tin-tuc/{{ $chosen_article['TieuDeKhongDau'] }}.html">
-                                            <img class="img-responsive" src="upload/tintuc/{{ $chosen_article['Hinh'] }}" alt="Hình ảnh đại diện của bài viết">
+                                            <img class="img-responsive" src="{{ $chosen_article['Hinh'] }}" alt="Hình ảnh đại diện của bài viết">
                                         </a>
                                     </div>
 

@@ -24,7 +24,7 @@
 
                             <a href="tin-tuc/{{ $chitiet->TieuDeKhongDau }}.html">
                                 <br>
-                                <img width="200px" height="200px" class="img-responsive" src="upload/tintuc/{{ $chitiet->Hinh }}" alt="">
+                                <img width="200px" height="200px" class="img-responsive" src="{{ $chitiet->Hinh }}" alt="">
                             </a>
                         </div>
 
