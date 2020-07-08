@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);
         // $this->call(TheLoaiTableSeeder::class);
-        // $this->call(LoaiTinTableSeeder::class);
+        $this->call(LoaiTinTableSeeder::class);
         // $this->call(TinTucTableSeeder::class);
         $this->call(SlideTableSeeder::class);
     }
@@ -25,9 +25,9 @@ class UsersTableSeeder extends Seeder
     {
         //
         DB::table('users')->insert([
-                'name' => 'boss',
-                'email' => 'boss@gmail.canh',
-                'password' => bcrypt('123456'),
+                'name' => 'Hoàng Toni',
+                'email' => 'hoanguyen@gmail.com',
+                'password' => bcrypt('hoangtoni'),
                 'quyen' => 1,
                 'created_at' => new DateTime()
             ]);
@@ -202,35 +202,50 @@ class LoaiTinTableSeeder extends Seeder
     //     	['idTheLoai'=>'6','Ten' => 'Hình Sự','TenKhongDau' => 'Hinh-Su']
     // 	]);
     // }
+
+    // public function run()
+    // {
+    //     //
+    //     DB::table('LoaiTin')->insert([
+    //     	['Ten' => 'Giáo Dục','TenKhongDau' => 'Giao-Duc'],
+    //     	['Ten' => 'Nhịp Điệu Trẻ','TenKhongDau' => 'Nhip-Dieu-Tre'],
+    //     	['Ten' => 'Du Lịch','TenKhongDau' => 'Du-Lich'],
+    //     	['Ten' => 'Du Học','TenKhongDau' => 'Du-Hoc'],
+    //     	['Ten' => 'Cuộc Sống Đó Đây','TenKhongDau' => 'Cuoc-Song-Do-Day'],
+    //     	['Ten' => 'Ảnh','TenKhongDau' => 'Anh'],
+    //     	['Ten' => 'Người Việt 5 Châu','TenKhongDau' => 'Nguoi-Viet-5-Chau'],
+    //     	['Ten' => 'Phân Tích','TenKhongDau' => 'Phan-Tich'],
+    //     	['Ten' => 'Chứng Khoán','TenKhongDau' => 'Chung-Khoan'],
+    //     	['Ten' => 'Bất Động Sản','TenKhongDau' => 'Bat-Dong-San'],
+    //     	['Ten' => 'Doanh Nhân','TenKhongDau' => 'Doanh-Nhan'],
+    //     	['Ten' => 'Quốc Tế','TenKhongDau' => 'Quoc-Te'],
+    //     	['Ten' => 'Mua Sắm','TenKhongDau' => 'Mua-Sam'],
+    //     	['Ten' => 'Doanh Nghiệp Viết','TenKhongDau' => 'Doanh-Nghiep-Viet'],
+    //     	['Ten' => 'Hoa Hậu','TenKhongDau' => 'Hoa-Hau'],
+    //     	['Ten' => 'Nghệ Sỹ','TenKhongDau' => 'Nghe-Sy'],
+    //     	['Ten' => 'Âm Nhạc','TenKhongDau' => 'Am-Nhac'],
+    //     	['Ten' => 'Thời Trang','TenKhongDau' => 'Thoi-Trang'],
+    //     	['Ten' => 'Điện Ảnh','TenKhongDau' => 'Dien-Anh'],
+    //     	['Ten' => 'Mỹ Thuật','TenKhongDau' => 'My-Thuat'],
+    //     	['Ten' => 'Bóng Đá','TenKhongDau' => 'Bong-Da'],
+    //     	['Ten' => 'Tennis','TenKhongDau' => 'Tennis'],
+    //     	['Ten' => 'Chân Dung','TenKhongDau' => 'Chan-Dung'],
+    //     	['Ten' => 'Ảnh','TenKhongDau' => 'Anh-TT'],
+    //     	['Ten' => 'Hình Sự','TenKhongDau' => 'Hinh-Su']
+    // 	]);
+    // }
+
     public function run()
     {
         //
         DB::table('LoaiTin')->insert([
-        	['Ten' => 'Giáo Dục','TenKhongDau' => 'Giao-Duc'],
-        	['Ten' => 'Nhịp Điệu Trẻ','TenKhongDau' => 'Nhip-Dieu-Tre'],
-        	['Ten' => 'Du Lịch','TenKhongDau' => 'Du-Lich'],
-        	['Ten' => 'Du Học','TenKhongDau' => 'Du-Hoc'],
-        	['Ten' => 'Cuộc Sống Đó Đây','TenKhongDau' => 'Cuoc-Song-Do-Day'],
-        	['Ten' => 'Ảnh','TenKhongDau' => 'Anh'],
-        	['Ten' => 'Người Việt 5 Châu','TenKhongDau' => 'Nguoi-Viet-5-Chau'],
-        	['Ten' => 'Phân Tích','TenKhongDau' => 'Phan-Tich'],
-        	['Ten' => 'Chứng Khoán','TenKhongDau' => 'Chung-Khoan'],
-        	['Ten' => 'Bất Động Sản','TenKhongDau' => 'Bat-Dong-San'],
-        	['Ten' => 'Doanh Nhân','TenKhongDau' => 'Doanh-Nhan'],
-        	['Ten' => 'Quốc Tế','TenKhongDau' => 'Quoc-Te'],
-        	['Ten' => 'Mua Sắm','TenKhongDau' => 'Mua-Sam'],
-        	['Ten' => 'Doanh Nghiệp Viết','TenKhongDau' => 'Doanh-Nghiep-Viet'],
-        	['Ten' => 'Hoa Hậu','TenKhongDau' => 'Hoa-Hau'],
-        	['Ten' => 'Nghệ Sỹ','TenKhongDau' => 'Nghe-Sy'],
-        	['Ten' => 'Âm Nhạc','TenKhongDau' => 'Am-Nhac'],
-        	['Ten' => 'Thời Trang','TenKhongDau' => 'Thoi-Trang'],
-        	['Ten' => 'Điện Ảnh','TenKhongDau' => 'Dien-Anh'],
-        	['Ten' => 'Mỹ Thuật','TenKhongDau' => 'My-Thuat'],
-        	['Ten' => 'Bóng Đá','TenKhongDau' => 'Bong-Da'],
-        	['Ten' => 'Tennis','TenKhongDau' => 'Tennis'],
-        	['Ten' => 'Chân Dung','TenKhongDau' => 'Chan-Dung'],
-        	['Ten' => 'Ảnh','TenKhongDau' => 'Anh-TT'],
-        	['Ten' => 'Hình Sự','TenKhongDau' => 'Hinh-Su']
+        	['Ten' => 'Pháp Luật','TenKhongDau' => 'phap-luat'],
+        	['Ten' => 'Kinh Doanh','TenKhongDau' => 'kinh-doanh'],
+        	['Ten' => 'Công Nghệ','TenKhongDau' => 'cong-nghe'],
+        	['Ten' => 'Xe','TenKhongDau' => 'xe'],
+        	['Ten' => 'Giáo Dục','TenKhongDau' => 'giao-duc'],
+        	['Ten' => 'Sức Khoẻ','TenKhongDau' => 'suc-khoe'],
+
     	]);
     }
 }

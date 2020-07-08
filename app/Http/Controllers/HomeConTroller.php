@@ -33,7 +33,7 @@ class HomeConTroller extends Controller
 
     public function LoaiTin($unsigned_name){
     	$loaitin = LoaiTin::where('TenKhongDau',$unsigned_name)->first(); // first dùng để lấy một dữ liệu duy nhất, get dùng để lấy nhiều dòng dữ liệu.
-    	$tintuc = TinTuc::where('idLoaiTin',$loaitin->id)->paginate(5);
+    	$tintuc = TinTuc::where('idLoaiTin',$loaitin->id)->paginate(100);
     	return view('page.category',['loaitin' => $loaitin, 'tintuc' => $tintuc]);
     }
 
@@ -158,7 +158,7 @@ class HomeConTroller extends Controller
 
     public function Search(Request $request){
     	$keyword = $request->keyword;
-    	$tintuc = TinTuc::where('TieuDe','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->paginate(5)->appends(['keyword' => $keyword]);
+    	$tintuc = TinTuc::where('TieuDe','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->orWhere('TomTat','like',"%$request->keyword%")->paginate(10)->appends(['keyword' => $keyword]);
 
     	return view('page.search',['tintuc' => $tintuc, 'keyword' => $request->keyword]);
     }

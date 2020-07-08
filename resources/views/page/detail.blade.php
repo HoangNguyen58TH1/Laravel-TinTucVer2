@@ -85,7 +85,7 @@
 				<!-- Comment -->
 				<div class="media">
 					<a class="pull-left" href="#">
-						<img class="media-object" src="http://placehold.it/64x64" alt="">
+						<img class="media-object" src="https://upload.wikimedia.org/wikipedia/commons/6/67/User_Avatar.png" width="64" height="64" alt="">
 					</a>
 					<div class="media-body">
 						<h4 class="media-heading">
