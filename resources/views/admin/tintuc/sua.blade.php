@@ -69,6 +69,7 @@
                             <div class="form-group">
                                 <p><label>Thêm Hình Ảnh</label></p>
                                 <p>
+                                    <!-- <img width="400px" src="upload/tintuc/{{ $tintuc->Hinh }}"> -->
                                     <img width="400px" src="{{ $tintuc->Hinh }}">
                                 </p>
                                 <input type="file" class="form-control" name="article_img">
