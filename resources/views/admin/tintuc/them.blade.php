@@ -45,8 +45,32 @@
 
                             <div class="form-group">
                                 <p><label>Tiêu Đề</label></p>
-                                <input type="text" class="form-control input-width" name="article_title" placeholder="Nhập Tiêu Đề Tin Tức" value="{{ old('article_title') }}" />
+                                <div style="display: flex; width: 100%">
+                                    <div style="width: 60%">
+                                        <input style="width: 90% !important" id="article_title" type="text" class="form-control input-width" name="article_title" placeholder="Nhập Tiêu Đề Tin Tức" value="{{ old('article_title') }}" />
+                                    </div>
+                                    <div style="width: 40%">
+                                        <button type="button" id="validate-button">Classifier</button>
+                                        <span id="thongbao"></span>
+                                    </div>
+                                </div>
                             </div>
+                            <script>
+                                $(document).ready(function () {
+                                    $('#validate-button').click(function () {
+                                        let title = $('#article_title').val()
+                                        if (title) {
+                                            let url = `http://localhost:3000/?title=${title || ''}`
+                                            $.get(url, function( data ) {
+                                                if (data && data.label) {
+                                                    // $('#thongbao').html(`Thể loại có thể là ${data.label} với độ chính xác là ${data.percent}`)
+                                                    $('#thongbao').html(`Thể loại có thể là ${data.label}`)
+                                                }
+                                            });
+                                        }
+                                    })
+                                })
+                            </script>
 
                             <div class="form-group">
                                 <p><label>Tóm Tắt Nội Dung</label></p>

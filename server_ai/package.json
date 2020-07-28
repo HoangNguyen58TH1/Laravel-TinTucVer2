@@ -1,0 +1,20 @@
+{
+  "name": "server_ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "remove-punctuation": "0.0.4",
+    "vietnamese-stopwords": "0.0.2",
+    "vntk": "^1.4.4",
+    "whichx": "^2.1.2"
+  }
+}

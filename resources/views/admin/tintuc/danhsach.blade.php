@@ -37,9 +37,18 @@
                                 <td>
                                     <p>{{ $chitiet->TieuDe }}</p>
                                     <!-- <img width="100px" src="upload/tintuc/{{ $chitiet->Hinh }}"> -->
-                                    <img width="100px" src="{{ $chitiet->Hinh }}">
+                                    <!-- <img width="100px" src="{{ $chitiet->Hinh }}"> -->
+                                    <?php
+                                    $check_img = $chitiet->Hinh;
+                                    if (preg_match("/https/i", $check_img) == 1){
+                                        echo '<img width="100px" src="'.$check_img.'">';
+                                    }
+                                    else {
+                                        echo '<img width="100px" src="upload/tintuc/'.$check_img.'">';
+                                    }
+                                    ?>
                                 </td>
-                                <td>{{ $chitiet->TomTat }}</td>
+                                <td>{!! $chitiet->TomTat !!}</td>
                                 <td>{{ $chitiet->LoaiTin->Ten }}</td>
                                 <td>{{ $chitiet->SoLuotXem }}</td>
                                 <td>

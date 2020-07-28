@@ -1,4 +1,8 @@
 /node_modules
 /vendor
+/server_ai/node_modules
+# /server_ai/node_modules/**/*
+# !/server_ai/node_modules/whichx/assets/scripts/*.js
+# !/server_ai/node_modules/whichx
 .env
 #

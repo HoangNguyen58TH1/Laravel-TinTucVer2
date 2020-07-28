@@ -70,7 +70,22 @@
                                 <p><label>Thêm Hình Ảnh</label></p>
                                 <p>
                                     <!-- <img width="400px" src="upload/tintuc/{{ $tintuc->Hinh }}"> -->
-                                    <img width="400px" src="{{ $tintuc->Hinh }}">
+                                    <!-- <img width="400px" src="{{ $tintuc->Hinh }}"> -->
+                                    <!-- if( {{ $tintuc->Hinh }} ) -->
+                                    <!-- if( {{ $tintuc->Hinh }} ) -->
+                                    <?php
+                                    $check_img =  $tintuc->Hinh;
+                                    if (preg_match("/https/i", $check_img) == 1){
+                                        echo '<img width="400px" src="'.$check_img.'">';
+                                    }
+                                    else {
+                                        echo '<img width="400px" src="upload/tintuc/'.$check_img.'">';
+                                    }
+
+                                    // echo preg_match("/https/i", $test);
+                                    // var_dump($test);
+                                    // exit();
+                                    ?>
                                 </p>
                                 <input type="file" class="form-control" name="article_img">
                             </div>
