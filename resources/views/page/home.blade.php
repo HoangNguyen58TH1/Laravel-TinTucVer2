@@ -37,7 +37,16 @@
                                 <div class="col-md-8 border-right">
                                     <div class="col-md-5">
                                         <a href="tin-tuc/{{ $chosen_article['TieuDeKhongDau'] }}.html">
-                                            <img class="img-responsive" src="{{ $chosen_article['Hinh'] }}" alt="Hình ảnh đại diện của bài viết">
+                                        <?php
+                                            $check_img = $chosen_article['Hinh'];
+                                            if (preg_match("/https/i", $check_img) == 1){
+                                                    echo '<img class="img-responsive" src="'.$check_img.'">';
+                                            }
+                                            else {
+                                                    echo '<img class="img-responsive" src="upload/tintuc/'.$check_img.'">';
+                                            }
+                                        ?>
+                                            <!-- <img class="img-responsive" src="{{ $chosen_article['Hinh'] }}" alt="Hình ảnh đại diện của bài viết"> -->
                                         </a>
                                     </div>
 

@@ -24,7 +24,20 @@
 
                             <a href="tin-tuc/{{ $chitiet->TieuDeKhongDau }}.html">
                                 <br>
-                                <img width="200" height="200" class="img-responsive" src="{{ $chitiet->Hinh }}" alt="">
+                                <?php
+                                    $check_img =  $chitiet->Hinh;
+                                    if (preg_match("/https/i", $check_img) == 1){
+                                        echo '<img width="200" height="200" class="img-responsive" src="'.$check_img.'">';
+                                    }
+                                    else {
+                                        echo '<img width="200" height="200" class="img-responsive" src="upload/tintuc/'.$check_img.'">';
+                                    }
+
+                                    // echo preg_match("/https/i", $test);
+                                    // var_dump($test);
+                                    // exit();
+                                    ?>
+                                <!-- <img width="200" height="200" class="img-responsive" src="{{ $chitiet->Hinh }}" alt=""> -->
                             </a>
                         </div>
 

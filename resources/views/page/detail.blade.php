@@ -25,7 +25,16 @@
 			</p>
 
 			<!-- Preview Image -->
-			<img class="img-responsive" src="{{ $tintuc->Hinh }}" alt="Hình ảnh của bài viết">
+			<?php
+				$check_img = $tintuc->Hinh;
+				if (preg_match("/https/i", $check_img) == 1){
+						echo '<img class="img-responsive" src="'.$check_img.'">';
+				}
+				else {
+						echo '<img class="img-responsive" src="upload/tintuc/'.$check_img.'">';
+				}
+				?>
+			<!-- <img class="img-responsive" src="{{ $tintuc->Hinh }}" alt="Hình ảnh của bài viết"> -->
 
 			<!-- Date/Time -->
 			<p><span class="glyphicon glyphicon-time"></span>
